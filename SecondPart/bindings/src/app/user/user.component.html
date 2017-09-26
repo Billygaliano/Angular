@@ -1,0 +1,18 @@
+<p>
+  <label for="in-name">Your name:</label>
+  <input type="text" id="in-name" [(ngModel)]="user.name">
+</p>
+
+<p>
+  <label for="in-surname">Your surname:</label>
+  <input type="text" id="in-surname" [(ngModel)]="user.surname">
+</p>
+<button (click)="btnBorrar($event)">Borrar</button>
+
+<P>
+  {{user.name=='Pepe' ? 'Welcome' : 'Hi again'}} {{user.name.toUpperCase()}} {{user.surname}}<br>
+  {{user | json}}
+</P>
+<ul>
+  <li *ngFor = "let hobby of hobbies; let i = index">({{i+1}}) {{hobby}}</li>
+</ul>
