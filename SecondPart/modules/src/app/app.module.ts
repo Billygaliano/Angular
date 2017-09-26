@@ -2,6 +2,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Own modules
+import { SharedModule } from './shared/shared.module';
+
 // Included components in our module
 import { AppComponent } from './app.component';
 
@@ -12,7 +15,8 @@ import { AppComponent } from './app.component';
   ],
   // What module needs
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
