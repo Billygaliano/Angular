@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListIdeasComponent implements OnInit {
 
+  ideas: Array<string>;
+  newIdea: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.ideas = [];
+  }
+
+  addIdea() {
+    this.ideas.push(this.newIdea);
+    this.newIdea = '';
   }
 
 }

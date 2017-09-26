@@ -1,3 +1,21 @@
 <p>
-  list-ideas works!
+  <label for="idea">Tell me some idea</label>
+  <input type="text" id="idea" [(ngModel)]="newIdea">
 </p>
+<p>
+  <button (clic)="addIdea()">Add</button>
+</p>
+
+<div *ngIf="ideas.length > 0; then ideasTemplate else vacioTemplate"></div>
+
+<ng-template #ideasTemplate>
+    <h2>List of Ideas</h2>
+    <ul>
+      <li *ngFor="let idea of ideas">{{idea}}</li>
+    </ul>
+</ng-template>
+
+<ng-template #vacioTemplate>
+    <p>Write something</p>
+</ng-template>
+
