@@ -16,7 +16,7 @@ export class AppPieComponent implements OnInit {
   ngOnInit() {
     this.sAutor = 'Guillermo Galiano';
     this.sEmpresa = 'Indra SL';
-    this.sLugar = 'Málagga';
+    this.sLugar = 'Málaga';
     this.sFecha = '2017';
   }
 
