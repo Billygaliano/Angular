@@ -1,0 +1,22 @@
+<h2>Buscar libros</h2>
+<p>
+  <input type="text"
+  placeholder="Clave de búsqueda"
+  [(ngModel)]="keySearch">
+</p>
+<p>
+  <button (click)="btnSearch()">Search</button>
+</p>
+
+<div *ngIf="results.length > 0; then searchOk else searchError"></div>
+
+<ng-template #searchOk>
+  <h3>Resultados de la búsqueda</h3>
+  <ul>
+    <li *ngFor="let result of results">{{result}}</li>
+  </ul>
+</ng-template>
+
+<ng-template #searchError>
+  <p>Ningún libro coincide con tu búsqueda</p>
+</ng-template>
