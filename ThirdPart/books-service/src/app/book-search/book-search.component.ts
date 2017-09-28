@@ -1,5 +1,6 @@
 import { BooksService } from '../services/books.service';
 import { Component, OnInit } from '@angular/core';
+// import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-book-search',
@@ -12,6 +13,7 @@ export class BookSearchComponent implements OnInit {
   public results: Array<string>;
 
   constructor(private svSearch: BooksService) { }
+  // constructor(private http: Http) { }
 
   ngOnInit() {
     this.keySearch = '';

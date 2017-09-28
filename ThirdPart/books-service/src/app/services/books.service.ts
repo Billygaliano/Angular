@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class BooksService {
 
-  public bookList: Array<string>;
+  bookList: Array<string>;
 
   constructor() { }
 
@@ -11,7 +11,8 @@ export class BooksService {
     this.bookList = [
       'El camino',
       'Clean Code',
-      'El valle de los leones'];
+      'El valle de los leones'
+    ];
     return (this.bookList);
   }
 
