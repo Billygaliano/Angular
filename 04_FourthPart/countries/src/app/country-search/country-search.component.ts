@@ -1,6 +1,7 @@
 import { Region } from '../model/regions';
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+
 const URL = 'http://restcountries.eu/rest/v1/region/';
 
 @Component({

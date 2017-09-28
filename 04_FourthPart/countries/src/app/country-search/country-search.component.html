@@ -1,6 +1,6 @@
 <h2>Countries REST Service</h2>
 <p>Select a region</p>
-<select placeholder="Region" name="region" id="region"[(ngModel)]="keyRegion" (ngModelChange)="getDataCountry()">
+<select placeholder="Region" name="region" id="region"[(ngModel)]="keyRegion" (change)="getDataCountry()">
   <option *ngFor="let region of regions"
       [ngValue]="region.name">
       {{region.name}}
