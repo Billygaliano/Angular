@@ -1,0 +1,21 @@
+<h2>Countries REST Service</h2>
+<p>Select a region</p>
+<select placeholder="Region" name="region" id="region"[(ngModel)]="keyRegion" (ngModelChange)="getDataCountry()">
+  <option *ngFor="let region of regions"
+      [ngValue]="region.name">
+      {{region.name}}
+  </option>
+</select>
+
+<div *ngIf="results.length > 0; then searchOk else searchError"></div>
+
+<ng-template #searchOk>
+  <h3>Search results ({{results.length}})</h3>
+  <ul>
+    <li *ngFor="let result of results">{{result}}</li>
+  </ul>
+</ng-template>
+
+<ng-template #searchError>
+  <p>No results</p>
+</ng-template>
